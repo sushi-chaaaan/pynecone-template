@@ -2,7 +2,7 @@ FROM node:16.19.0-buster-slim as node
 FROM jarredsumner/bun:edge as bun
 
 
-FROM python:3.10-buster as builder
+FROM python:3.11-buster as builder
 # python environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
@@ -20,7 +20,7 @@ RUN pip install --no-cache-dir -U pip  &&\
     pip install --no-cache-dir -r /root/requirements.txt
 
 
-FROM python:3.10-slim-buster as runner
+FROM python:3.11-slim-buster as runner
 # set work directory
 WORKDIR /app
 
