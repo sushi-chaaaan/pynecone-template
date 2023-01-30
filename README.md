@@ -15,9 +15,15 @@ Go to the project directory
   cd {repo_name}
 ```
 
+If you want to use [pre-commit](https://pre-commit.com/):
+
+```bash
+pre-commit install
+```
+
 Install pynecone dependencies from [here](https://pynecone.io/docs/getting-started/installation)
 
-if you have not installed [poetry](https://github.com/python-poetry/poetry), please install.
+If you have not installed [poetry](https://github.com/python-poetry/poetry), please install.
 
 Install dependencies use poetry
 
