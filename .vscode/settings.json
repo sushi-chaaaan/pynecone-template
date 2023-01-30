@@ -1,0 +1,6 @@
+{
+    "flake8.path": [
+        ".venv/bin/pflake8"
+    ],
+    "python.analysis.typeCheckingMode": "off"
+}
