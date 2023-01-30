@@ -2,5 +2,8 @@
     "flake8.path": [
         ".venv/bin/pflake8"
     ],
-    "python.analysis.typeCheckingMode": "off"
+    "python.analysis.typeCheckingMode": "off",
+    "cSpell.words": [
+        "pynecone"
+    ]
 }
