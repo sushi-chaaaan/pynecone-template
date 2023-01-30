@@ -11,13 +11,13 @@ repos:
         args: [--autofix, --indent, "4"]
 
   - repo: https://github.com/pycqa/isort
-    rev: 5.10.1
+    rev: 5.12.0
     hooks:
       - id: isort
         name: isort (python)
 
   - repo: https://github.com/psf/black
-    rev: 22.10.0
+    rev: 22.12.0
     hooks:
       - id: black
         # It is recommended to specify the latest version of Python
@@ -27,7 +27,7 @@ repos:
         language_version: python3.10
 
   - repo: https://github.com/python-poetry/poetry
-    rev: "1.2.2" # add version here
+    rev: "1.3.2" # add version here
     hooks:
       - id: poetry-check
       - id: poetry-lock
