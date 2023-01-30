@@ -24,14 +24,6 @@ FROM python:3.10-slim-buster as runner
 # set work directory
 WORKDIR /app
 
-# install packages used in bun installation
-# RUN apt-get update &&\
-#     apt-get install -y --no-install-recommends \
-#     curl \
-#     unzip &&\
-#     apt-get clean &&\
-#     rm -rf /var/lib/apt/lists/*
-
 # copy nodejs binaries
 COPY --from=node /usr/local/bin /usr/local/bin
 COPY --from=node /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/npm
