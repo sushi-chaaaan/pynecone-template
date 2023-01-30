@@ -1,23 +1,21 @@
 [tool.poetry]
-name = "pynecone-playground"
+name = "pynecone-template"
 version = "0.1.0"
 description = ""
 authors = ["sushi-chaaaan <mail@sushichan.live>"]
 readme = "README.md"
-# packages = [{include = "pynecone_playground"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 pynecone-io = "^0.1.13"
 
 [tool.poetry.group.dev.dependencies]
-black = { version = "^22.12.0", extras = ["jupyter"] }
+black = "^22.12.0"
 mypy = "^0.991"
 isort = "^5.11.4"
 pyproject-flake8 = "^6.0.0.post1"
 flake8-isort = "^6.0.0"
 poethepoet = "^0.18.0"
-ipykernel = "^6.20.2"
 python-dotenv = "^0.21.1"
 
 [tool.black]
