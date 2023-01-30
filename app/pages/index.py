@@ -1,36 +1,35 @@
 """Welcome to Pynecone! This file outlines the steps to create a basic app."""
 import pynecone as pc
 
-from app.state import BaseState
 from pcconfig import config
 
 docs_url = "https://pynecone.io/docs/getting-started/introduction"
 filename = f"{config.app_name}/{config.app_name}.py"
 
 
-class State(BaseState):
-    count: int = 0
-
-    def increment_by_2(self):
-        self.count += 2
-
-    def decrement_by_2(self):
-        self.count -= 2
-
-
 def index():
-    return pc.hstack(
-        pc.button(
-            "Decrement",
-            color_scheme="red",
-            border_radius="1em",
-            on_click=State.decrement_by_2,
+    return pc.center(
+        pc.vstack(
+            pc.heading("Welcome to Pynecone!", font_size="2em"),
+            pc.box("Get started by editing ", pc.code(filename, font_size="1em")),
+            pc.link(
+                "Check out our docs!",
+                href=docs_url,
+                border="0.1em solid",
+                padding="0.5em",
+                border_radius="0.5em",
+                _hover={
+                    "color": "rgb(107,99,246)",
+                },
+            ),
+            pc.link(
+                pc.button("counter"),
+                href="/counter",
+                color="rgb(107,99,246)",
+                button=True,
+            ),
+            spacing="1.5em",
+            font_size="2em",
         ),
-        pc.heading(State.count, font_size="2em"),
-        pc.button(
-            "Increment",
-            color_scheme="green",
-            border_radius="1em",
-            on_click=State.increment_by_2,
-        ),
+        padding_top="10%",
     )
