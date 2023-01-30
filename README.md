@@ -22,7 +22,7 @@ if you have not installed [poetry](https://github.com/python-poetry/poetry), ple
 Install dependencies use poetry
 
 ```bash
-poetry install
+poetry install && poetry update
 ```
 
 Start the Server
