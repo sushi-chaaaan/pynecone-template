@@ -25,6 +25,12 @@ Install dependencies use poetry
 poetry install && poetry update
 ```
 
+Init pynecone
+
+```bash
+pc init
+```
+
 Start the Server
 
 ```bash
