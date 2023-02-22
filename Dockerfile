@@ -1,4 +1,4 @@
-FROM node:16.19.0-buster-slim as node
+FROM node:19.7.0-buster-slim as node
 FROM jarredsumner/bun:edge as bun
 
 
